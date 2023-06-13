@@ -46,12 +46,13 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  padding: 40px 24px;
+  align-items: flex-start;
   gap: 27px;
+  padding: 40px 24px;
 }
 
-section img {
+
+section picture, section img {
   max-width: 100%;
 }
 
@@ -67,6 +68,12 @@ section h2 {
   color: #23272A;
 }
 
+.switch-direction {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .switch-color {
   background-color: #F6F6F6;
 }
@@ -76,5 +83,119 @@ footer {
   justify-content: center;
   background-color: #23272A;
   padding: 24px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px){
+  body {
+    text-align: center;
+  }
+
+  section {
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px){
+  p, h2 {
+    max-width: 500px;
+  }
+
+  header p {
+    max-width: 700px;
+  }
+
+  header {
+    align-items: center;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .button {
+    padding: 11px 24px;
+  }
+
+  section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+  }
+
+  section h2, section h1{
+    font-size: 2rem;
+  }
+
+  .section-4 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  header h1, p, h2 {
+    max-width: 700px;
+  }
+
+  header {
+    align-items: center;
+    text-align: center;
+    background-image: url(../images/header-desktop-background.png);
+  }
+
+  header h1 {
+    font-size: 3.5rem;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .button {
+    padding: 11px 24px;
+  }
+
+  section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section h2, section h1{
+    font-size: 2.5rem;
+  }
+
+  section h2, section p {
+    max-width: 500px;
+  }
+
+  .section-4 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-4 p {
+    max-width: 700px;
+  }
+
+  .switch-direction {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
